@@ -1,0 +1,132 @@
+-- DABA BEGINNER POWER BI DAX MEASURES
+-- Dataset: ABC Retail Ltd
+-- Document Code: DABA-PBI-DAX-001
+
+Total Sales =
+SUM ( FactSalesOrders[Total Amount] )
+
+Completed Sales =
+CALCULATE (
+    [Total Sales],
+    FactSalesOrders[Order Status] = "Completed"
+)
+
+Total Orders =
+COUNTROWS ( FactSalesOrders )
+
+Completed Orders =
+CALCULATE (
+    [Total Orders],
+    FactSalesOrders[Order Status] = "Completed"
+)
+
+Cancelled Orders =
+CALCULATE (
+    [Total Orders],
+    FactSalesOrders[Order Status] = "Cancelled"
+)
+
+Average Order Value =
+DIVIDE ( [Completed Sales], [Completed Orders], 0 )
+
+Unique Customers =
+DISTINCTCOUNT ( FactSalesOrders[Customer ID] )
+
+Total Quantity Sold =
+SUM ( FactSalesItems[Quantity] )
+
+Gross Profit =
+SUM ( FactSalesItems[Gross Profit] )
+
+Gross Margin % =
+DIVIDE ( [Gross Profit], [Completed Sales], 0 )
+
+Total Discounts =
+SUM ( FactSalesOrders[Discount] )
+
+Total Tax =
+SUM ( FactSalesOrders[Tax] )
+
+Paid Orders =
+CALCULATE (
+    [Total Orders],
+    FactSalesOrders[Payment Status] = "Paid"
+)
+
+Partial Orders =
+CALCULATE (
+    [Total Orders],
+    FactSalesOrders[Payment Status] = "Partial"
+)
+
+Paid Order % =
+DIVIDE ( [Paid Orders], [Total Orders], 0 )
+
+Total Amount Paid =
+SUM ( FactPayments[Amount Paid] )
+
+Outstanding Amount =
+[Completed Sales] - [Total Amount Paid]
+
+Inventory Units Available =
+SUM ( FactInventory[Quantity Available] )
+
+Products Requiring Reorder =
+CALCULATE (
+    DISTINCTCOUNT ( FactInventory[Product ID] ),
+    FactInventory[Stock Status] = "Reorder Required"
+)
+
+Inventory Value =
+SUMX (
+    FactInventory,
+    FactInventory[Quantity Available]
+        * RELATED ( DimProduct[Cost Price] )
+)
+
+Total Budget =
+SUM ( FactBudget[Budget Amount] )
+
+Total Expenses =
+SUMX (
+    FactExpenses,
+    FactExpenses[Amount] + FactExpenses[Tax Amount]
+)
+
+Budget Variance =
+[Total Budget] - [Total Expenses]
+
+Budget Utilization % =
+DIVIDE ( [Total Expenses], [Total Budget], 0 )
+
+Sales Previous Month =
+CALCULATE (
+    [Completed Sales],
+    DATEADD ( DimDate[Date], -1, MONTH )
+)
+
+Sales MoM Change =
+[Completed Sales] - [Sales Previous Month]
+
+Sales MoM % =
+DIVIDE ( [Sales MoM Change], [Sales Previous Month], 0 )
+
+Sales YTD =
+TOTALYTD (
+    [Completed Sales],
+    DimDate[Date]
+)
+
+Revenue Status =
+SWITCH (
+    TRUE (),
+    [Completed Sales] >= 750000, "Excellent",
+    [Completed Sales] >= 500000, "Good",
+    "Needs Attention"
+)
+
+Selected Period =
+"Period: "
+    & FORMAT ( MIN ( DimDate[Date] ), "dd MMM yyyy" )
+    & " - "
+    & FORMAT ( MAX ( DimDate[Date] ), "dd MMM yyyy" )
