@@ -1,0 +1,339 @@
+digraph Phase2ERD {
+  graph [rankdir=LR, bgcolor="white", fontname="Arial", fontsize=11, nodesep=0.25, ranksep=0.75, pad=0.3, splines=polyline];
+  node [shape=plain, fontname="Arial"];
+  edge [fontname="Arial", fontsize=7, color="#667788", arrowsize=0.65];
+  label="ABC Retail Ltd Phase 2 Enterprise Data Model";
+  labelloc="t"; fontsize=20; fontcolor="#17365D";
+  "logistics.Routes" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>logistics.Routes</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">RouteID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">RouteCode</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">RouteName</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">OriginBranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DestinationCity</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DestinationRegionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +5 columns</FONT></TD></TR>
+</TABLE>>];
+  "logistics.Vehicles" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>logistics.Vehicles</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">VehicleID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">VehicleCode</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">RegistrationNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">VehicleType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">Make</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">Model</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +12 columns</FONT></TD></TR>
+</TABLE>>];
+  "logistics.Drivers" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>logistics.Drivers</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DriverID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DriverCode</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">EmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">LicenseNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">LicenseClass</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">LicenseExpiryDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +5 columns</FONT></TD></TR>
+</TABLE>>];
+  "logistics.Deliveries" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>logistics.Deliveries</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DeliveryID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DeliveryNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SalesOrderID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">CustomerID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">RouteID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +15 columns</FONT></TD></TR>
+</TABLE>>];
+  "logistics.DeliveryItems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>logistics.DeliveryItems</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DeliveryItemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DeliveryID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SalesOrderItemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ProductID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">QuantityPlanned</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">QuantityDelivered</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +4 columns</FONT></TD></TR>
+</TABLE>>];
+  "logistics.VehicleMaintenance" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>logistics.VehicleMaintenance</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">MaintenanceID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">MaintenanceNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">VehicleID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">MaintenanceType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ReportedDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ScheduledDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +10 columns</FONT></TD></TR>
+</TABLE>>];
+  "inventory.StockCounts" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>inventory.StockCounts</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">StockCountID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">CountNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">WarehouseID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">CountDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">CountType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +5 columns</FONT></TD></TR>
+</TABLE>>];
+  "inventory.StockCountItems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>inventory.StockCountItems</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">StockCountItemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">StockCountID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ProductID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SystemQuantity</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">CountedQuantity</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">VarianceQuantity</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +5 columns</FONT></TD></TR>
+</TABLE>>];
+  "procurement.GoodsReceipts" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>procurement.GoodsReceipts</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">GoodsReceiptID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ReceiptNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">PurchaseOrderID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SupplierID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">WarehouseID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +7 columns</FONT></TD></TR>
+</TABLE>>];
+  "procurement.GoodsReceiptItems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>procurement.GoodsReceiptItems</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">GoodsReceiptItemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">GoodsReceiptID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">PurchaseOrderItemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ProductID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">QuantityReceived</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">QuantityAccepted</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +3 columns</FONT></TD></TR>
+</TABLE>>];
+  "procurement.SupplierPerformance" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>procurement.SupplierPerformance</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SupplierPerformanceID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SupplierID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">PeriodStart</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">PeriodEnd</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">OrdersPlaced</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">OrdersDeliveredOnTime</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +9 columns</FONT></TD></TR>
+</TABLE>>];
+  "marketing.MarketingLeads" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>marketing.MarketingLeads</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">LeadID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">LeadNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">CampaignID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ExistingCustomerID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">LeadDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">LeadSource</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +7 columns</FONT></TD></TR>
+</TABLE>>];
+  "marketing.MarketingExpenses" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>marketing.MarketingExpenses</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">MarketingExpenseID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">MarketingExpenseNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">CampaignID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ExpenseDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ExpenseCategory</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SupplierID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +5 columns</FONT></TD></TR>
+</TABLE>>];
+  "crm.LoyaltyTransactions" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>crm.LoyaltyTransactions</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">LoyaltyTransactionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">LoyaltyTransactionNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">CustomerID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SalesOrderID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">TransactionDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">TransactionType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +4 columns</FONT></TD></TR>
+</TABLE>>];
+  "service.CustomerInteractions" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>service.CustomerInteractions</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">InteractionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">InteractionNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">CustomerID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SalesOrderID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ComplaintID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">InteractionDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +8 columns</FONT></TD></TR>
+</TABLE>>];
+  "it.Systems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>it.Systems</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SystemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SystemCode</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SystemName</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SystemType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">BusinessOwnerDepartmentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">TechnicalOwnerEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +10 columns</FONT></TD></TR>
+</TABLE>>];
+  "it.ITAssets" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>it.ITAssets</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AssetID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AssetTag</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AssetName</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AssetType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SerialNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +13 columns</FONT></TD></TR>
+</TABLE>>];
+  "it.SystemUsers" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>it.SystemUsers</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SystemUserID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SystemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">EmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">Username</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AccountType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">PrivilegeLevel</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +6 columns</FONT></TD></TR>
+</TABLE>>];
+  "it.ITSupportTickets" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>it.ITSupportTickets</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">TicketID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">TicketNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AssetID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SystemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">RequesterEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AssignedToEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +13 columns</FONT></TD></TR>
+</TABLE>>];
+  "security.SecurityControls" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>security.SecurityControls</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ControlID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ControlCode</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ControlName</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ControlDomain</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ControlType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ControlOwnerDepartmentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +8 columns</FONT></TD></TR>
+</TABLE>>];
+  "security.Vulnerabilities" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>security.Vulnerabilities</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">VulnerabilityID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">VulnerabilityNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AssetID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SystemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DetectedDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">VulnerabilityTitle</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +11 columns</FONT></TD></TR>
+</TABLE>>];
+  "security.SecurityAlerts" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>security.SecurityAlerts</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AlertID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AlertNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AlertTimestamp</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AssetID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SystemUserID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AlertSource</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +11 columns</FONT></TD></TR>
+</TABLE>>];
+  "security.SecurityIncidents" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>security.SecurityIncidents</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">IncidentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">IncidentNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AlertID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AssetID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">SystemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +17 columns</FONT></TD></TR>
+</TABLE>>];
+  "risk.RiskRegister" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>risk.RiskRegister</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">RiskID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">RiskNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">RiskTitle</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">RiskCategory</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DepartmentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +18 columns</FONT></TD></TR>
+</TABLE>>];
+  "audit.Audits" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>audit.Audits</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AuditID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AuditNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AuditTitle</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AuditType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AuditScope</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">LeadAuditorEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +10 columns</FONT></TD></TR>
+</TABLE>>];
+  "audit.AuditFindings" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>audit.AuditFindings</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">FindingID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">FindingNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">AuditID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DepartmentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">RiskID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +13 columns</FONT></TD></TR>
+</TABLE>>];
+  "audit.CorrectiveActions" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>audit.CorrectiveActions</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">CorrectiveActionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ActionNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">FindingID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ActionDescription</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ActionOwnerEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">PlannedStartDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +10 columns</FONT></TD></TR>
+</TABLE>>];
+  "bi.KPIDefinitions" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>bi.KPIDefinitions</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">KPIDefinitionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">KPICode</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">KPIName</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DepartmentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">BusinessPurpose</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">KPIDefinition</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +13 columns</FONT></TD></TR>
+</TABLE>>];
+  "bi.KPIValidationLog" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>bi.KPIValidationLog</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">KPIValidationID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">KPIDefinitionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">KPIResultID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ValidationDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">PeriodStart</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">PeriodEnd</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +11 columns</FONT></TD></TR>
+</TABLE>>];
+  "bi.KPIPublications" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>bi.KPIPublications</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">KPIPublicationID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">PublicationNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ReportingPeriodStart</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ReportingPeriodEnd</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">PublicationType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">PublishedAt</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +8 columns</FONT></TD></TR>
+</TABLE>>];
+  "bi.KPIPublicationItems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>bi.KPIPublicationItems</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">KPIPublicationItemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">KPIPublicationID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">KPIDefinitionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">KPIResultID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">DisplayOrder</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">ManagementCommentary</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8">... +3 columns</FONT></TD></TR>
+</TABLE>>];
+  "bi.KPIResults" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>bi.KPIResults</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "core.Branches" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>core.Branches</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "core.Departments" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>core.Departments</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "core.Regions" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>core.Regions</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "crm.Customers" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>crm.Customers</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "hr.Employees" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>hr.Employees</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "inventory.Warehouses" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>inventory.Warehouses</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "marketing.MarketingCampaigns" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>marketing.MarketingCampaigns</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "procurement.PurchaseOrderItems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>procurement.PurchaseOrderItems</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "procurement.PurchaseOrders" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>procurement.PurchaseOrders</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "procurement.Suppliers" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>procurement.Suppliers</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "product.Products" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>product.Products</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "sales.SalesOrderItems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>sales.SalesOrderItems</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "sales.SalesOrders" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>sales.SalesOrders</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "service.CustomerComplaints" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>service.CustomerComplaints</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="8">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "logistics.Routes" -> "core.Branches" [label="OriginBranchID"];
+  "logistics.Routes" -> "core.Regions" [label="DestinationRegionID"];
+  "logistics.Vehicles" -> "core.Branches" [label="AssignedBranchID"];
+  "logistics.Drivers" -> "hr.Employees" [label="EmployeeID"];
+  "logistics.Deliveries" -> "sales.SalesOrders" [label="SalesOrderID"];
+  "logistics.Deliveries" -> "crm.Customers" [label="CustomerID"];
+  "logistics.Deliveries" -> "core.Branches" [label="BranchID"];
+  "logistics.Deliveries" -> "logistics.Routes" [label="RouteID"];
+  "logistics.Deliveries" -> "logistics.Vehicles" [label="VehicleID"];
+  "logistics.Deliveries" -> "logistics.Drivers" [label="DriverID"];
+  "logistics.DeliveryItems" -> "logistics.Deliveries" [label="DeliveryID"];
+  "logistics.DeliveryItems" -> "sales.SalesOrderItems" [label="SalesOrderItemID"];
+  "logistics.DeliveryItems" -> "product.Products" [label="ProductID"];
+  "logistics.VehicleMaintenance" -> "logistics.Vehicles" [label="VehicleID"];
+  "logistics.VehicleMaintenance" -> "procurement.Suppliers" [label="SupplierID"];
+  "logistics.VehicleMaintenance" -> "hr.Employees" [label="ApprovedByEmployeeID"];
+  "inventory.StockCounts" -> "inventory.Warehouses" [label="WarehouseID"];
+  "inventory.StockCounts" -> "core.Branches" [label="BranchID"];
+  "inventory.StockCounts" -> "hr.Employees" [label="CountSupervisorID"];
+  "inventory.StockCounts" -> "hr.Employees" [label="ApprovedByEmployeeID"];
+  "inventory.StockCountItems" -> "inventory.StockCounts" [label="StockCountID"];
+  "inventory.StockCountItems" -> "product.Products" [label="ProductID"];
+  "inventory.StockCountItems" -> "hr.Employees" [label="InvestigatedByEmployeeID"];
+  "procurement.GoodsReceipts" -> "procurement.PurchaseOrders" [label="PurchaseOrderID"];
+  "procurement.GoodsReceipts" -> "procurement.Suppliers" [label="SupplierID"];
+  "procurement.GoodsReceipts" -> "inventory.Warehouses" [label="WarehouseID"];
+  "procurement.GoodsReceipts" -> "core.Branches" [label="BranchID"];
+  "procurement.GoodsReceipts" -> "hr.Employees" [label="ReceivedByEmployeeID"];
+  "procurement.GoodsReceiptItems" -> "procurement.GoodsReceipts" [label="GoodsReceiptID"];
+  "procurement.GoodsReceiptItems" -> "procurement.PurchaseOrderItems" [label="PurchaseOrderItemID"];
+  "procurement.GoodsReceiptItems" -> "product.Products" [label="ProductID"];
+  "procurement.SupplierPerformance" -> "procurement.Suppliers" [label="SupplierID"];
+  "procurement.SupplierPerformance" -> "hr.Employees" [label="ReviewedByEmployeeID"];
+  "marketing.MarketingLeads" -> "marketing.MarketingCampaigns" [label="CampaignID"];
+  "marketing.MarketingLeads" -> "crm.Customers" [label="ExistingCustomerID"];
+  "marketing.MarketingLeads" -> "crm.Customers" [label="ConvertedCustomerID"];
+  "marketing.MarketingLeads" -> "hr.Employees" [label="OwnerEmployeeID"];
+  "marketing.MarketingExpenses" -> "marketing.MarketingCampaigns" [label="CampaignID"];
+  "marketing.MarketingExpenses" -> "procurement.Suppliers" [label="SupplierID"];
+  "marketing.MarketingExpenses" -> "hr.Employees" [label="ApprovedByEmployeeID"];
+  "crm.LoyaltyTransactions" -> "crm.Customers" [label="CustomerID"];
+  "crm.LoyaltyTransactions" -> "sales.SalesOrders" [label="SalesOrderID"];
+  "service.CustomerInteractions" -> "crm.Customers" [label="CustomerID"];
+  "service.CustomerInteractions" -> "sales.SalesOrders" [label="SalesOrderID"];
+  "service.CustomerInteractions" -> "service.CustomerComplaints" [label="ComplaintID"];
+  "service.CustomerInteractions" -> "hr.Employees" [label="EmployeeID"];
+  "service.CustomerInteractions" -> "core.Branches" [label="BranchID"];
+  "it.Systems" -> "core.Departments" [label="BusinessOwnerDepartmentID"];
+  "it.Systems" -> "hr.Employees" [label="TechnicalOwnerEmployeeID"];
+  "it.ITAssets" -> "core.Branches" [label="BranchID"];
+  "it.ITAssets" -> "hr.Employees" [label="AssignedEmployeeID"];
+  "it.ITAssets" -> "it.Systems" [label="SystemID"];
+  "it.SystemUsers" -> "it.Systems" [label="SystemID"];
+  "it.SystemUsers" -> "hr.Employees" [label="EmployeeID"];
+  "it.ITSupportTickets" -> "it.ITAssets" [label="AssetID"];
+  "it.ITSupportTickets" -> "it.Systems" [label="SystemID"];
+  "it.ITSupportTickets" -> "hr.Employees" [label="RequesterEmployeeID"];
+  "it.ITSupportTickets" -> "hr.Employees" [label="AssignedToEmployeeID"];
+  "it.ITSupportTickets" -> "core.Branches" [label="BranchID"];
+  "security.SecurityControls" -> "core.Departments" [label="ControlOwnerDepartmentID"];
+  "security.SecurityControls" -> "hr.Employees" [label="ControlOwnerEmployeeID"];
+  "security.Vulnerabilities" -> "it.ITAssets" [label="AssetID"];
+  "security.Vulnerabilities" -> "it.Systems" [label="SystemID"];
+  "security.Vulnerabilities" -> "hr.Employees" [label="AssignedToEmployeeID"];
+  "security.SecurityAlerts" -> "it.ITAssets" [label="AssetID"];
+  "security.SecurityAlerts" -> "it.SystemUsers" [label="SystemUserID"];
+  "security.SecurityAlerts" -> "hr.Employees" [label="AssignedToEmployeeID"];
+  "security.SecurityIncidents" -> "security.SecurityAlerts" [label="AlertID"];
+  "security.SecurityIncidents" -> "it.ITAssets" [label="AssetID"];
+  "security.SecurityIncidents" -> "it.Systems" [label="SystemID"];
+  "security.SecurityIncidents" -> "core.Branches" [label="BranchID"];
+  "security.SecurityIncidents" -> "hr.Employees" [label="ReportedByEmployeeID"];
+  "security.SecurityIncidents" -> "hr.Employees" [label="AssignedToEmployeeID"];
+  "security.SecurityIncidents" -> "security.SecurityControls" [label="ControlID"];
+  "risk.RiskRegister" -> "core.Departments" [label="DepartmentID"];
+  "risk.RiskRegister" -> "core.Branches" [label="BranchID"];
+  "risk.RiskRegister" -> "it.ITAssets" [label="AssetID"];
+  "risk.RiskRegister" -> "it.Systems" [label="SystemID"];
+  "risk.RiskRegister" -> "hr.Employees" [label="RiskOwnerEmployeeID"];
+  "audit.Audits" -> "hr.Employees" [label="LeadAuditorEmployeeID"];
+  "audit.Audits" -> "core.Departments" [label="DepartmentID"];
+  "audit.Audits" -> "core.Branches" [label="BranchID"];
+  "audit.AuditFindings" -> "audit.Audits" [label="AuditID"];
+  "audit.AuditFindings" -> "core.Departments" [label="DepartmentID"];
+  "audit.AuditFindings" -> "core.Branches" [label="BranchID"];
+  "audit.AuditFindings" -> "risk.RiskRegister" [label="RiskID"];
+  "audit.AuditFindings" -> "security.SecurityControls" [label="ControlID"];
+  "audit.AuditFindings" -> "hr.Employees" [label="ResponsibleEmployeeID"];
+  "audit.CorrectiveActions" -> "audit.AuditFindings" [label="FindingID"];
+  "audit.CorrectiveActions" -> "hr.Employees" [label="ActionOwnerEmployeeID"];
+  "audit.CorrectiveActions" -> "hr.Employees" [label="VerifiedByEmployeeID"];
+  "bi.KPIDefinitions" -> "core.Departments" [label="DepartmentID"];
+  "bi.KPIDefinitions" -> "hr.Employees" [label="DataOwnerEmployeeID"];
+  "bi.KPIValidationLog" -> "bi.KPIDefinitions" [label="KPIDefinitionID"];
+  "bi.KPIValidationLog" -> "bi.KPIResults" [label="KPIResultID"];
+  "bi.KPIValidationLog" -> "hr.Employees" [label="ValidatorEmployeeID"];
+  "bi.KPIPublications" -> "hr.Employees" [label="PublishedByEmployeeID"];
+  "bi.KPIPublications" -> "hr.Employees" [label="ApprovedByEmployeeID"];
+  "bi.KPIPublicationItems" -> "bi.KPIPublications" [label="KPIPublicationID"];
+  "bi.KPIPublicationItems" -> "bi.KPIDefinitions" [label="KPIDefinitionID"];
+  "bi.KPIPublicationItems" -> "bi.KPIResults" [label="KPIResultID"];
+  "bi.KPIPublicationItems" -> "hr.Employees" [label="ResponsibleEmployeeID"];
+}

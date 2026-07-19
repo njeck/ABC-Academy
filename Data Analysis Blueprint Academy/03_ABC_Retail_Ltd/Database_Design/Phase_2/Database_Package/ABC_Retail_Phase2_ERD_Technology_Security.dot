@@ -1,0 +1,89 @@
+digraph DomainERD {
+  graph [rankdir=LR, bgcolor="white", fontname="Arial", fontsize=11, nodesep=0.35, ranksep=0.9, pad=0.3, splines=polyline];
+  node [shape=plain, fontname="Arial"];
+  edge [fontname="Arial", fontsize=8, color="#667788", arrowsize=0.7];
+  label="ABC Retail Phase2 ERD Technology Security";
+  labelloc="t"; fontsize=18; fontcolor="#17365D";
+  "it.ITAssets" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>it.ITAssets</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AssetID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AssetTag</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AssetName</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AssetType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SerialNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AssignedEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +11 columns</FONT></TD></TR>
+</TABLE>>];
+  "it.ITSupportTickets" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>it.ITSupportTickets</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">TicketID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">TicketNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AssetID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">RequesterEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AssignedToEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CreatedAt</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +11 columns</FONT></TD></TR>
+</TABLE>>];
+  "it.SystemUsers" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>it.SystemUsers</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemUserID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">EmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">Username</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AccountType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PrivilegeLevel</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AccountStatus</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CreatedDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +4 columns</FONT></TD></TR>
+</TABLE>>];
+  "it.Systems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>it.Systems</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemCode</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemName</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">BusinessOwnerDepartmentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">TechnicalOwnerEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">Criticality</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">HostingModel</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +8 columns</FONT></TD></TR>
+</TABLE>>];
+  "security.SecurityAlerts" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>security.SecurityAlerts</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AlertID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AlertNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AlertTimestamp</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AssetID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemUserID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AlertSource</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AlertType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">Severity</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +9 columns</FONT></TD></TR>
+</TABLE>>];
+  "security.SecurityControls" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>security.SecurityControls</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ControlID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ControlCode</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ControlName</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ControlDomain</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ControlType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ControlOwnerDepartmentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ControlOwnerEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ImplementationStatus</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +6 columns</FONT></TD></TR>
+</TABLE>>];
+  "security.SecurityIncidents" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>security.SecurityIncidents</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">IncidentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">IncidentNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AlertID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AssetID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ReportedByEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AssignedToEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +15 columns</FONT></TD></TR>
+</TABLE>>];
+  "security.Vulnerabilities" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>security.Vulnerabilities</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">VulnerabilityID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">VulnerabilityNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AssetID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DetectedDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">VulnerabilityTitle</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CVEIdentifier</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">Severity</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +9 columns</FONT></TD></TR>
+</TABLE>>];
+  "core.Branches" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>core.Branches</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "core.Departments" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>core.Departments</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "hr.Employees" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>hr.Employees</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "it.Systems" -> "core.Departments" [label="BusinessOwnerDepartmentID"];
+  "it.Systems" -> "hr.Employees" [label="TechnicalOwnerEmployeeID"];
+  "it.ITAssets" -> "core.Branches" [label="BranchID"];
+  "it.ITAssets" -> "hr.Employees" [label="AssignedEmployeeID"];
+  "it.ITAssets" -> "it.Systems" [label="SystemID"];
+  "it.SystemUsers" -> "it.Systems" [label="SystemID"];
+  "it.SystemUsers" -> "hr.Employees" [label="EmployeeID"];
+  "it.ITSupportTickets" -> "it.ITAssets" [label="AssetID"];
+  "it.ITSupportTickets" -> "it.Systems" [label="SystemID"];
+  "it.ITSupportTickets" -> "hr.Employees" [label="RequesterEmployeeID"];
+  "it.ITSupportTickets" -> "hr.Employees" [label="AssignedToEmployeeID"];
+  "it.ITSupportTickets" -> "core.Branches" [label="BranchID"];
+  "security.SecurityControls" -> "core.Departments" [label="ControlOwnerDepartmentID"];
+  "security.SecurityControls" -> "hr.Employees" [label="ControlOwnerEmployeeID"];
+  "security.Vulnerabilities" -> "it.ITAssets" [label="AssetID"];
+  "security.Vulnerabilities" -> "it.Systems" [label="SystemID"];
+  "security.Vulnerabilities" -> "hr.Employees" [label="AssignedToEmployeeID"];
+  "security.SecurityAlerts" -> "it.ITAssets" [label="AssetID"];
+  "security.SecurityAlerts" -> "it.SystemUsers" [label="SystemUserID"];
+  "security.SecurityAlerts" -> "hr.Employees" [label="AssignedToEmployeeID"];
+  "security.SecurityIncidents" -> "security.SecurityAlerts" [label="AlertID"];
+  "security.SecurityIncidents" -> "it.ITAssets" [label="AssetID"];
+  "security.SecurityIncidents" -> "it.Systems" [label="SystemID"];
+  "security.SecurityIncidents" -> "core.Branches" [label="BranchID"];
+  "security.SecurityIncidents" -> "hr.Employees" [label="ReportedByEmployeeID"];
+  "security.SecurityIncidents" -> "hr.Employees" [label="AssignedToEmployeeID"];
+  "security.SecurityIncidents" -> "security.SecurityControls" [label="ControlID"];
+}

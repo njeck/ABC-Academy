@@ -19,10 +19,11 @@ All notable changes to the DABA and ABC Retail Ltd project should be documented 
 ### Added
 
 - Departmental Analytics Casebook workbook and instructor guide.
+- ABC Retail Phase 2 database package with schema, synthetic seed data, validation queries, data dictionary, ERDs, and static-check results.
 
 ### Next
 
-- Build ABC Retail Phase 2 database
+- Run the Phase 2 package against Microsoft SQL Server 2019 or later and record runtime-validation results.
 - Reconcile all casebook tables with the enterprise model
 - Complete 24 weekly lesson-delivery packages
 - Build enterprise dashboards

@@ -1,0 +1,110 @@
+digraph DomainERD {
+  graph [rankdir=LR, bgcolor="white", fontname="Arial", fontsize=11, nodesep=0.35, ranksep=0.9, pad=0.3, splines=polyline];
+  node [shape=plain, fontname="Arial"];
+  edge [fontname="Arial", fontsize=8, color="#667788", arrowsize=0.7];
+  label="ABC Retail Phase2 ERD Risk Audit BI";
+  labelloc="t"; fontsize=18; fontcolor="#17365D";
+  "audit.AuditFindings" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>audit.AuditFindings</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">FindingID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">FindingNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AuditID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DepartmentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">RiskID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ControlID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">FindingTitle</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +11 columns</FONT></TD></TR>
+</TABLE>>];
+  "audit.Audits" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>audit.Audits</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AuditID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AuditNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AuditTitle</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AuditType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AuditScope</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">LeadAuditorEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DepartmentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +8 columns</FONT></TD></TR>
+</TABLE>>];
+  "audit.CorrectiveActions" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>audit.CorrectiveActions</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CorrectiveActionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ActionNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">FindingID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ActionDescription</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ActionOwnerEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PlannedStartDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DueDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CompletionDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +8 columns</FONT></TD></TR>
+</TABLE>>];
+  "bi.KPIDefinitions" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>bi.KPIDefinitions</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">KPIDefinitionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">KPICode</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">KPIName</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DepartmentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">BusinessPurpose</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">KPIDefinition</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CalculationMethod</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PerformanceDirection</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +11 columns</FONT></TD></TR>
+</TABLE>>];
+  "bi.KPIPublicationItems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>bi.KPIPublicationItems</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">KPIPublicationItemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">KPIPublicationID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">KPIDefinitionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">KPIResultID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DisplayOrder</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ManagementCommentary</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ActionRequired</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ResponsibleEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +1 columns</FONT></TD></TR>
+</TABLE>>];
+  "bi.KPIPublications" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>bi.KPIPublications</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">KPIPublicationID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PublicationNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ReportingPeriodStart</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ReportingPeriodEnd</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PublicationType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PublishedAt</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PublishedByEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ApprovalStatus</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +6 columns</FONT></TD></TR>
+</TABLE>>];
+  "bi.KPIValidationLog" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>bi.KPIValidationLog</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">KPIValidationID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">KPIDefinitionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">KPIResultID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ValidationDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PeriodStart</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PeriodEnd</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ValidatorEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SourceRecordCount</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +9 columns</FONT></TD></TR>
+</TABLE>>];
+  "risk.RiskRegister" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>risk.RiskRegister</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">RiskID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">RiskNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">RiskTitle</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">RiskCategory</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DepartmentID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AssetID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +16 columns</FONT></TD></TR>
+</TABLE>>];
+  "bi.KPIResults" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>bi.KPIResults</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "core.Branches" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>core.Branches</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "core.Departments" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>core.Departments</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "hr.Employees" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>hr.Employees</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "it.ITAssets" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>it.ITAssets</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 2 reference</FONT></TD></TR>
+</TABLE>>];
+  "it.Systems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>it.Systems</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 2 reference</FONT></TD></TR>
+</TABLE>>];
+  "security.SecurityControls" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>security.SecurityControls</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 2 reference</FONT></TD></TR>
+</TABLE>>];
+  "risk.RiskRegister" -> "core.Departments" [label="DepartmentID"];
+  "risk.RiskRegister" -> "core.Branches" [label="BranchID"];
+  "risk.RiskRegister" -> "it.ITAssets" [label="AssetID"];
+  "risk.RiskRegister" -> "it.Systems" [label="SystemID"];
+  "risk.RiskRegister" -> "hr.Employees" [label="RiskOwnerEmployeeID"];
+  "audit.Audits" -> "hr.Employees" [label="LeadAuditorEmployeeID"];
+  "audit.Audits" -> "core.Departments" [label="DepartmentID"];
+  "audit.Audits" -> "core.Branches" [label="BranchID"];
+  "audit.AuditFindings" -> "audit.Audits" [label="AuditID"];
+  "audit.AuditFindings" -> "core.Departments" [label="DepartmentID"];
+  "audit.AuditFindings" -> "core.Branches" [label="BranchID"];
+  "audit.AuditFindings" -> "risk.RiskRegister" [label="RiskID"];
+  "audit.AuditFindings" -> "security.SecurityControls" [label="ControlID"];
+  "audit.AuditFindings" -> "hr.Employees" [label="ResponsibleEmployeeID"];
+  "audit.CorrectiveActions" -> "audit.AuditFindings" [label="FindingID"];
+  "audit.CorrectiveActions" -> "hr.Employees" [label="ActionOwnerEmployeeID"];
+  "audit.CorrectiveActions" -> "hr.Employees" [label="VerifiedByEmployeeID"];
+  "bi.KPIDefinitions" -> "core.Departments" [label="DepartmentID"];
+  "bi.KPIDefinitions" -> "hr.Employees" [label="DataOwnerEmployeeID"];
+  "bi.KPIValidationLog" -> "bi.KPIDefinitions" [label="KPIDefinitionID"];
+  "bi.KPIValidationLog" -> "bi.KPIResults" [label="KPIResultID"];
+  "bi.KPIValidationLog" -> "hr.Employees" [label="ValidatorEmployeeID"];
+  "bi.KPIPublications" -> "hr.Employees" [label="PublishedByEmployeeID"];
+  "bi.KPIPublications" -> "hr.Employees" [label="ApprovedByEmployeeID"];
+  "bi.KPIPublicationItems" -> "bi.KPIPublications" [label="KPIPublicationID"];
+  "bi.KPIPublicationItems" -> "bi.KPIDefinitions" [label="KPIDefinitionID"];
+  "bi.KPIPublicationItems" -> "bi.KPIResults" [label="KPIResultID"];
+  "bi.KPIPublicationItems" -> "hr.Employees" [label="ResponsibleEmployeeID"];
+}

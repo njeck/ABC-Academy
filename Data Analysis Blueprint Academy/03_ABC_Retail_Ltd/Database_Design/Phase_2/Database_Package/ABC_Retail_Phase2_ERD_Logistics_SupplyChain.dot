@@ -1,0 +1,150 @@
+digraph DomainERD {
+  graph [rankdir=LR, bgcolor="white", fontname="Arial", fontsize=11, nodesep=0.35, ranksep=0.9, pad=0.3, splines=polyline];
+  node [shape=plain, fontname="Arial"];
+  edge [fontname="Arial", fontsize=8, color="#667788", arrowsize=0.7];
+  label="ABC Retail Phase2 ERD Logistics SupplyChain";
+  labelloc="t"; fontsize=18; fontcolor="#17365D";
+  "inventory.StockCountItems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>inventory.StockCountItems</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">StockCountItemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">StockCountID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ProductID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SystemQuantity</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CountedQuantity</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">VarianceQuantity</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">UnitCost</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">VarianceValue</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +3 columns</FONT></TD></TR>
+</TABLE>>];
+  "inventory.StockCounts" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>inventory.StockCounts</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">StockCountID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CountNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">WarehouseID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CountDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CountType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CountStatus</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CountSupervisorID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +3 columns</FONT></TD></TR>
+</TABLE>>];
+  "logistics.Deliveries" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>logistics.Deliveries</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DeliveryID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DeliveryNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SalesOrderID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CustomerID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">RouteID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">VehicleID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DriverID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +13 columns</FONT></TD></TR>
+</TABLE>>];
+  "logistics.DeliveryItems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>logistics.DeliveryItems</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DeliveryItemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DeliveryID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SalesOrderItemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ProductID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">QuantityPlanned</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">QuantityDelivered</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DamageQuantity</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ReturnQuantity</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +2 columns</FONT></TD></TR>
+</TABLE>>];
+  "logistics.Drivers" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>logistics.Drivers</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DriverID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DriverCode</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">EmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">LicenseNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">LicenseClass</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">LicenseExpiryDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DriverStartDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DriverStatus</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +3 columns</FONT></TD></TR>
+</TABLE>>];
+  "logistics.Routes" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>logistics.Routes</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">RouteID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">RouteCode</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">RouteName</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">OriginBranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DestinationCity</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DestinationRegionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">DistanceKM</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">StandardTravelHours</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +3 columns</FONT></TD></TR>
+</TABLE>>];
+  "logistics.VehicleMaintenance" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>logistics.VehicleMaintenance</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">MaintenanceID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">MaintenanceNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">VehicleID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">MaintenanceType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ReportedDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ScheduledDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">StartDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CompletionDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +8 columns</FONT></TD></TR>
+</TABLE>>];
+  "logistics.Vehicles" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>logistics.Vehicles</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">VehicleID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">VehicleCode</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">RegistrationNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">VehicleType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">Make</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">Model</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ModelYear</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CapacityKG</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +10 columns</FONT></TD></TR>
+</TABLE>>];
+  "procurement.GoodsReceiptItems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>procurement.GoodsReceiptItems</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">GoodsReceiptItemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">GoodsReceiptID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PurchaseOrderItemID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ProductID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">QuantityReceived</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">QuantityAccepted</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">QuantityRejected</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">UnitCost</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +1 columns</FONT></TD></TR>
+</TABLE>>];
+  "procurement.GoodsReceipts" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>procurement.GoodsReceipts</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">GoodsReceiptID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ReceiptNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PurchaseOrderID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SupplierID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">WarehouseID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">BranchID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ReceiptDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ReceivedByEmployeeID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +5 columns</FONT></TD></TR>
+</TABLE>>];
+  "procurement.SupplierPerformance" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>procurement.SupplierPerformance</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SupplierPerformanceID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SupplierID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PeriodStart</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">PeriodEnd</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">OrdersPlaced</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">OrdersDeliveredOnTime</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">OrdersComplete</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">AverageLeadTimeDays</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +7 columns</FONT></TD></TR>
+</TABLE>>];
+  "core.Branches" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>core.Branches</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "core.Regions" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>core.Regions</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "crm.Customers" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>crm.Customers</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "hr.Employees" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>hr.Employees</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "inventory.Warehouses" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>inventory.Warehouses</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "procurement.PurchaseOrderItems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>procurement.PurchaseOrderItems</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "procurement.PurchaseOrders" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>procurement.PurchaseOrders</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "procurement.Suppliers" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>procurement.Suppliers</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "product.Products" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>product.Products</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "sales.SalesOrderItems" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>sales.SalesOrderItems</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "sales.SalesOrders" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>sales.SalesOrders</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "logistics.Routes" -> "core.Branches" [label="OriginBranchID"];
+  "logistics.Routes" -> "core.Regions" [label="DestinationRegionID"];
+  "logistics.Vehicles" -> "core.Branches" [label="AssignedBranchID"];
+  "logistics.Drivers" -> "hr.Employees" [label="EmployeeID"];
+  "logistics.Deliveries" -> "sales.SalesOrders" [label="SalesOrderID"];
+  "logistics.Deliveries" -> "crm.Customers" [label="CustomerID"];
+  "logistics.Deliveries" -> "core.Branches" [label="BranchID"];
+  "logistics.Deliveries" -> "logistics.Routes" [label="RouteID"];
+  "logistics.Deliveries" -> "logistics.Vehicles" [label="VehicleID"];
+  "logistics.Deliveries" -> "logistics.Drivers" [label="DriverID"];
+  "logistics.DeliveryItems" -> "logistics.Deliveries" [label="DeliveryID"];
+  "logistics.DeliveryItems" -> "sales.SalesOrderItems" [label="SalesOrderItemID"];
+  "logistics.DeliveryItems" -> "product.Products" [label="ProductID"];
+  "logistics.VehicleMaintenance" -> "logistics.Vehicles" [label="VehicleID"];
+  "logistics.VehicleMaintenance" -> "procurement.Suppliers" [label="SupplierID"];
+  "logistics.VehicleMaintenance" -> "hr.Employees" [label="ApprovedByEmployeeID"];
+  "inventory.StockCounts" -> "inventory.Warehouses" [label="WarehouseID"];
+  "inventory.StockCounts" -> "core.Branches" [label="BranchID"];
+  "inventory.StockCounts" -> "hr.Employees" [label="CountSupervisorID"];
+  "inventory.StockCounts" -> "hr.Employees" [label="ApprovedByEmployeeID"];
+  "inventory.StockCountItems" -> "inventory.StockCounts" [label="StockCountID"];
+  "inventory.StockCountItems" -> "product.Products" [label="ProductID"];
+  "inventory.StockCountItems" -> "hr.Employees" [label="InvestigatedByEmployeeID"];
+  "procurement.GoodsReceipts" -> "procurement.PurchaseOrders" [label="PurchaseOrderID"];
+  "procurement.GoodsReceipts" -> "procurement.Suppliers" [label="SupplierID"];
+  "procurement.GoodsReceipts" -> "inventory.Warehouses" [label="WarehouseID"];
+  "procurement.GoodsReceipts" -> "core.Branches" [label="BranchID"];
+  "procurement.GoodsReceipts" -> "hr.Employees" [label="ReceivedByEmployeeID"];
+  "procurement.GoodsReceiptItems" -> "procurement.GoodsReceipts" [label="GoodsReceiptID"];
+  "procurement.GoodsReceiptItems" -> "procurement.PurchaseOrderItems" [label="PurchaseOrderItemID"];
+  "procurement.GoodsReceiptItems" -> "product.Products" [label="ProductID"];
+  "procurement.SupplierPerformance" -> "procurement.Suppliers" [label="SupplierID"];
+  "procurement.SupplierPerformance" -> "hr.Employees" [label="ReviewedByEmployeeID"];
+}

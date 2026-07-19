@@ -1,0 +1,76 @@
+digraph DomainERD {
+  graph [rankdir=LR, bgcolor="white", fontname="Arial", fontsize=11, nodesep=0.35, ranksep=0.9, pad=0.3, splines=polyline];
+  node [shape=plain, fontname="Arial"];
+  edge [fontname="Arial", fontsize=8, color="#667788", arrowsize=0.7];
+  label="ABC Retail Phase2 ERD Customer Growth";
+  labelloc="t"; fontsize=18; fontcolor="#17365D";
+  "crm.LoyaltyTransactions" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>crm.LoyaltyTransactions</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">LoyaltyTransactionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">LoyaltyTransactionNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CustomerID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SalesOrderID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">TransactionDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">TransactionType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">Points</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">BalanceAfter</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +2 columns</FONT></TD></TR>
+</TABLE>>];
+  "marketing.MarketingExpenses" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>marketing.MarketingExpenses</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">MarketingExpenseID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">MarketingExpenseNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CampaignID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ExpenseDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ExpenseCategory</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SupplierID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">Amount</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">TaxAmount</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +3 columns</FONT></TD></TR>
+</TABLE>>];
+  "marketing.MarketingLeads" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>marketing.MarketingLeads</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">LeadID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">LeadNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CampaignID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ExistingCustomerID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">LeadDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">LeadSource</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">LeadStatus</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">LeadScore</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +5 columns</FONT></TD></TR>
+</TABLE>>];
+  "service.CustomerInteractions" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#17365D">
+<TR><TD BGCOLOR="#17365D"><FONT COLOR="white"><B>service.CustomerInteractions</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">InteractionID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">InteractionNumber</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">CustomerID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">SalesOrderID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">ComplaintID</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">InteractionDate</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">InteractionChannel</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">InteractionType</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">... +6 columns</FONT></TD></TR>
+</TABLE>>];
+  "core.Branches" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>core.Branches</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "crm.Customers" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>crm.Customers</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "hr.Employees" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>hr.Employees</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "marketing.MarketingCampaigns" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>marketing.MarketingCampaigns</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "procurement.Suppliers" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>procurement.Suppliers</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "sales.SalesOrders" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>sales.SalesOrders</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "service.CustomerComplaints" [label=<
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" COLOR="#D9A300">
+<TR><TD BGCOLOR="#FFF2CC"><FONT COLOR="#1F1F1F"><B>service.CustomerComplaints</B></FONT></TD></TR>
+<TR><TD><FONT POINT-SIZE="9">Phase 1 reference</FONT></TD></TR>
+</TABLE>>];
+  "marketing.MarketingLeads" -> "marketing.MarketingCampaigns" [label="CampaignID"];
+  "marketing.MarketingLeads" -> "crm.Customers" [label="ExistingCustomerID"];
+  "marketing.MarketingLeads" -> "crm.Customers" [label="ConvertedCustomerID"];
+  "marketing.MarketingLeads" -> "hr.Employees" [label="OwnerEmployeeID"];
+  "marketing.MarketingExpenses" -> "marketing.MarketingCampaigns" [label="CampaignID"];
+  "marketing.MarketingExpenses" -> "procurement.Suppliers" [label="SupplierID"];
+  "marketing.MarketingExpenses" -> "hr.Employees" [label="ApprovedByEmployeeID"];
+  "crm.LoyaltyTransactions" -> "crm.Customers" [label="CustomerID"];
+  "crm.LoyaltyTransactions" -> "sales.SalesOrders" [label="SalesOrderID"];
+  "service.CustomerInteractions" -> "crm.Customers" [label="CustomerID"];
+  "service.CustomerInteractions" -> "sales.SalesOrders" [label="SalesOrderID"];
+  "service.CustomerInteractions" -> "service.CustomerComplaints" [label="ComplaintID"];
+  "service.CustomerInteractions" -> "hr.Employees" [label="EmployeeID"];
+  "service.CustomerInteractions" -> "core.Branches" [label="BranchID"];
+}

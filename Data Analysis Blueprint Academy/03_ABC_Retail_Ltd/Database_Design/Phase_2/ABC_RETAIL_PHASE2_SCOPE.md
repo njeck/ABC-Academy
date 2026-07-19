@@ -1,6 +1,7 @@
 # ABC Retail Ltd Phase 2 Database Scope
 
 **Priority:** Critical
+**Package status:** Prepared; Microsoft SQL Server runtime validation pending
 **Reason:** The Departmental Analytics Casebook includes business questions that depend on tables not available in Phase 1.
 
 ## New schemas
