@@ -1,0 +1,12 @@
+{
+  "departmental_cases": 22,
+  "questions": 66,
+  "instructor_solutions": 66,
+  "question_ids_unique": true,
+  "solutions_match_questions": true,
+  "known_tables_in_schema": 56,
+  "tables_referenced_by_solutions": 48,
+  "unknown_table_references": [],
+  "balanced_parentheses_instructor": true,
+  "student_contains_no_solution_queries": true
+}

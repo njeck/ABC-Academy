@@ -36,6 +36,7 @@ This repository contains the academy's curriculum, governance documents, trainin
 | `Data Analysis Blueprint Academy/05_SQL/` | SQL student, instructor, and practical resources |
 | `Data Analysis Blueprint Academy/06_Power_BI/` | Power BI labs, DAX measures, and reporting resources |
 | `Data Analysis Blueprint Academy/08_Student_Resources/` | Student resources and AI prompt libraries |
+| `Data Analysis Blueprint Academy/09_Instructor_Resources/` | Restricted instructor guides, solutions, and assessment-control materials |
 | `Data Analysis Blueprint Academy/10_Assessments/` | Module assessments and marking resources |
 | `Data Analysis Blueprint Academy/18_Projects/` | Integrated ABC Retail capstone project |
 | `Data Analysis Blueprint Academy/19_Archive/` | Archived or superseded materials pending cleanup |

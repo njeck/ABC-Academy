@@ -20,6 +20,7 @@ All notable changes to the DABA and ABC Retail Ltd project should be documented 
 
 - Departmental Analytics Casebook workbook and instructor guide.
 - ABC Retail Phase 2 database package with schema, synthetic seed data, validation queries, data dictionary, ERDs, and static-check results.
+- Departmental SQL case pack with 66 student challenges and separately classified restricted instructor solutions.
 
 ### Next
 

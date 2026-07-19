@@ -33,6 +33,7 @@
 | DABA-ABC-CASE-001 | Departmental Analytics Casebook | Case Studies | XLSX | Developed | BI / Academic Affairs | Annual |
 | DABA-ABC-CASE-002 | Departmental Casebook Instructor Guide | Case Studies | Markdown | Developed | BI / Academic Affairs | Annual |
 | DABA-ABC-DB-006 | ABC Retail Phase 2 Database Package | Database | SQL/XLSX/PDF/PNG/SVG/DOT/JSON | Prepared - runtime validation pending | Technology / BI | Per release |
+| DABA-ABC-SQL-CASE-003 | ABC Retail Departmental SQL Case Pack | SQL Case Studies | SQL/XLSX/Markdown/JSON | Developed | BI / Academic Affairs | Annual |
 | DABA-PMO-001 | Project Roadmap | Project Management | Markdown | Prepared | Founder / PMO | Monthly |
 | DABA-DOC-001 | Master Document Register | Document Control | Markdown/XLSX | Prepared | Document Control | Monthly |
 
